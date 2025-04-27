@@ -109,7 +109,8 @@ class _WorldStatsScreenState extends State<WorldStatsScreen>
                     },
                     child: const Text(
                       'Track Countries',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.w500),
                     ),
                     style: ButtonStyle(
                       fixedSize: WidgetStateProperty.all(const Size(250, 40)),
