@@ -41,7 +41,7 @@ class _WorldStatsScreenState extends State<WorldStatsScreen>
             } else {
               return Column(
                 children: [
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.06),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.09),
                   Padding(
                     padding: const EdgeInsets.only(right: 18.0),
                     child: PieChart(
@@ -107,16 +107,18 @@ class _WorldStatsScreenState extends State<WorldStatsScreen>
                         ),
                       );
                     },
-                    child: const Text(
-                      'Track Countries',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.w500),
-                    ),
                     style: ButtonStyle(
                       fixedSize: WidgetStateProperty.all(const Size(250, 40)),
                       elevation: const WidgetStatePropertyAll(3),
                       backgroundColor:
                           const WidgetStatePropertyAll(Colors.blueAccent),
+                    ),
+                    child: const Text(
+                      'Track Countries',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15),
                     ),
                   )
                 ],

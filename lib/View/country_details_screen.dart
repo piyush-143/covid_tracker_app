@@ -24,6 +24,7 @@ class _CountryDetailsState extends State<CountryDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 80,
         title: Text(
           widget.name,
           style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 25),
@@ -31,7 +32,7 @@ class _CountryDetailsState extends State<CountryDetails> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 35),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

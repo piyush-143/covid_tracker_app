@@ -2,7 +2,8 @@ import 'dart:convert';
 
 import 'package:covid_tracker/Services/Utils/app_urls.dart';
 import 'package:http/http.dart' as http;
-import '../Model/WorldStatsModel.dart';
+
+import '../Model/world_stats_model.dart';
 
 class StatsServices {
   //World Stats

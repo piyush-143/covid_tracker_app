@@ -19,6 +19,7 @@ class _CountriesListState extends State<CountriesList> {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
+          toolbarHeight: 80,
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         ),
         body: Padding(

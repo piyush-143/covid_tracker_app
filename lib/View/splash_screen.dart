@@ -5,7 +5,7 @@ import 'package:covid_tracker/View/world_stats_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -13,25 +13,27 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
-  late final AnimationController _controller =
-      AnimationController(duration: const Duration(seconds: 3), vsync: this)
-        ..repeat();
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
+  late final AnimationController _controller;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    _controller =
+        AnimationController(duration: const Duration(seconds: 3), vsync: this)
+          ..repeat();
     Timer(
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(context,
                 MaterialPageRoute(builder: (context) {
               return const WorldStatsScreen();
             })));
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   @override
